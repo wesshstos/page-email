@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+  /* COLORS */
+  --desaturarion-red: #ce9797;
+  --soft-red: #f96262;
+  --dark-red: #413a3a;
+
+  /* FONT */
+  --font-size-body: 1rem;
+  --font-size-title: 4.5rem;
+  --size-3: 300;
+  --size-4: 400;
+  --size-6: 600;
+
+  /* GRADIENTS */
+  --gradient-btn: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  --gradient-btn-hover: linear-gradient(135deg, #ce9797, #f96262);
+}
+
+main {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-text {
+  background-image: url("src/img/bg-pattern-desktop.svg");
+  padding: 70px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  padding: 0 20px 25px 20px;
+  width: 100%;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.mobal-img {
+  display: none;
+}
+
+.text-banner {
+  margin: 0 0 0 10px;
+}
+
+.text-banner h1 {
+  margin: 25px 0 25px 10px;
+  color: var(--dark-red);
+  font-size: var(--font-size-title);
+  font-weight: var(--size-6);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  line-height: 5rem;
+}
+
+.text-banner h1 > span {
+  font-weight: var(--size-3);
+  color: var(--desaturarion-red);
+}
+
+.text-banner p {
+  color: var(--desaturarion-red);
+  font-size: var(--font-size-body);
+  line-height: 1.5rem;
+  text-align: justify;
+  text-indent: 1cm;
+  margin: 0 0 20px 10px;
+  width: 88%;
+}
+
+form {
+  width: 100%;
+  position: relative;
+  padding: 20px 20px 20px 0;
+}
+
+form > input {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  font-weight: var(--size-4);
+  font-size: 1.2rem;
+  border: 0.6px solid var(--dark-red);
+  border-radius: 100px;
+  outline: none;
+  background: #fff;
+  transition: border 0.2s ease-in-out;
+}
+
+form > input::placeholder {
+  color: #c1c1c1;
+}
+
+form > input:focus {
+  border: 1px solid var(--desaturarion-red);
+}
+
+form > img {
+  display: none;
+  position: absolute;
+  top: 35%;
+  right: 25%;
+  transition: display 0.6s ease-in-out;
+}
+
+form > button {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--gradient-btn);
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  box-shadow: 5px 5px 10px 1px #413a3a50;
+}
+
+form > button:hover {
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: none;
+  cursor: pointer;
+  background: var(--gradient-btn-hover);
+}
+
+#msgError {
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  display: none;
+  color: var(--soft-red);
+  position: relative;
+}
+
+.content-img {
+  display: block;
+  background-image: url("src/img/hero-desktop.jpg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  width: 80%;
+  height: 100vh;
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .content-text {
+    padding: 0;
+    width: 100vw;
+    padding: 50px;
+  }
+
+  .logo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-banner {
+    margin: 0;
+    display: contents;
+    padding: 50px;
+  }
+
+  .text-banner h1 {
+    margin: 30px 20px;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+
+  .text-banner p {
+    text-indent: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .content-img {
+    display: none;
+  }
+
+  form {
+    
+  }
+
+  form > input {
+    min-width: 100%;
+    padding: 15px 15px 15px 20px;
+  }
+
+  form > img {
+    top: 37%;
+    right: 32%;
+  }
+
+  #msgError {
+    text-align: center;
+    padding: 0 0 5px 0;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  .content-text {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: left;
+    padding: 0;
+    display: block;
+    height: auto;
+  }
+
+  .logo {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+  }
+
+  .mobal-img {
+    display: block;
+    margin: 10px 0;
+    position: relative;
+  }
+
+  .mobal-img img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .text-banner{
+    margin: 0;
+  }
+
+  .text-banner h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0.6rem;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .text-banner p {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+  }
+  form{
+    padding: 20px;
+  }
+
+  form > input {
+    padding: 15px 15px 15px 20px;
+  }
+
+  form > label {
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  form > img {
+    top: 37%;
+    right: 32%;
+  }
+
+  .content-img {
+    display: none;
+  }
+
+  #msgError {
+    text-align: center;
+    padding: 0 0 5px 0;
+  }
+}

@@ -200,10 +200,6 @@ form > button:hover {
     display: none;
   }
 
-  form {
-    
-  }
-
   form > input {
     min-width: 100%;
     padding: 15px 15px 15px 20px;
